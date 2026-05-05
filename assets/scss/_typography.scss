@@ -1,0 +1,159 @@
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+ 
+$heading-font: "Quicksand", sans-serif;
+$body-font: 'Source Sans Pro', sans-serif;
+
+
+//font-family: "Font Awesome 5 Pro";
+$fa: "Font Awesome 5 Pro";
+
+body {
+    font-family: $body-font;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    color: $text-color;
+    background-color: $white;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	font-weight: 400;
+
+	@include breakpoint (max-xl){
+		font-size: 16px;
+	}
+
+	@include breakpoint (max-xxs){
+		font-size: 15px;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+	padding: 0;
+}
+
+input:focus{
+	color: $white;
+	outline: none;
+}
+
+input{
+	color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    margin: 0px;
+	padding: 0;
+    color: $header-color;
+	font-weight: 400;
+	@include transition;
+}
+
+h1 {
+	font-size: 76px;
+	font-weight: 700;
+	line-height: 112%;
+
+	@include breakpoint (max-xxl){
+		font-size: 60px;
+	}
+
+	@include breakpoint (max-xl){
+		font-size: 54px;
+	}
+
+	@include breakpoint (max-lg){
+		font-size: 58px;
+	}
+
+	@include breakpoint (max-md){
+		font-size: 50px;
+	}
+
+	@include breakpoint (max-sm){
+		font-size: 40px;
+	}
+
+	@include breakpoint (max-xxs){
+		font-size: 32px;
+	}
+}
+
+h2 {
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 141%;
+	letter-spacing: -0.04em;
+
+	@include breakpoint(max-xl){
+		font-size: 40px;
+	}
+
+	@include breakpoint(max-xxs){
+		font-size: 32px;
+	}
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 155%;
+
+	@include breakpoint(max-lg){
+		font-size: 20px;
+	}
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 160%;
+}
+
+h6 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    color: $header-color;
+	display: inline-block;
+	@include transition;
+}
+
+p {
+    margin: 0px;
+	@include transition;
+}
+
+
+

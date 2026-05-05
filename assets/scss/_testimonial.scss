@@ -1,0 +1,647 @@
+
+.testimonial-section{
+    position: relative;
+
+    .pencil-icon{
+        position: absolute;
+        left: 19%;
+        top: 17%;
+        animation: rounded2 6s linear infinite;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+            left: 10%;
+        }
+    }
+    .flower-shape{
+        position: absolute;
+        right: 21%;
+        top: 29%;
+        animation: cir36 6s linear infinite;
+
+         @include breakpoint (max-xl){
+            opacity: .2;
+            right: 5%;
+        }
+    }
+}
+
+.testimonial-section-2{
+    position: relative;
+}
+
+.testimonial-section-three{
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: $bg-color-3;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1070"><path   d="M1835.26 14.7093C1868.35 -11.2088 1905.54 6.88918 1920 19.1779L1919.87 1069.5L2.85717e-05 1069.5L0.133788 10.2405C23.5394 -5.17632 48.223 3.81683 57.639 10.2405C75.7986 24.3167 92.1085 20.2019 97.9935 16.3849C127.452 -6.18174 153.649 1.21013 163.065 7.7269C185.664 23.814 201.738 20.2019 206.951 16.3849C238.427 -5.06457 264.456 1.67563 273.536 7.72691C293.309 23.814 308.005 20.2019 312.881 16.3849C344.358 -5.95829 369.041 1.30325 377.448 7.72691C396.415 23.5906 415.617 20.1088 422.847 16.3849C452.306 -5.06455 479.512 1.67564 489.432 7.72692C509.206 26.2718 527.937 21.226 534.831 16.3849C562.676 -7.07543 592.168 2.69972 603.434 10.5198C619.172 23.4789 632.186 19.8295 636.726 16.3849C667.799 -6.62856 692.718 -0.46556 701.293 5.49263C721.471 25.6015 741.648 21.1329 749.214 16.3849C779.884 -6.85198 806.047 2.60664 815.295 10.2406C837.086 25.2105 855.313 18.8986 861.703 13.8714C891.969 -7.5781 919.04 2.51357 928.793 10.2406C943.32 25.2105 959.731 18.8986 966.121 13.8714C995.983 -7.13122 1023.29 2.69977 1033.21 10.2406C1053.79 25.6574 1071.04 19.0848 1077.1 13.8714C1103.33 -7.13121 1133.76 2.69978 1145.7 10.2406C1163.05 27.2214 1182.52 18.8055 1190.09 12.4749C1215.51 -6.29336 1242.38 3.16526 1252.64 10.2406C1267.97 24.5403 1284.92 18.6193 1291.48 13.8714C1313.67 -5.34376 1339.74 0.651677 1349.99 6.05129C1371.38 25.043 1392.53 19.1779 1400.44 13.8714C1424.65 -5.79061 1452.22 1.76885 1462.99 8.00633C1486.39 26.9981 1504.35 19.8296 1510.4 13.8714C1532.19 -4.45001 1558.49 1.02408 1568.92 6.05131C1585.46 26.6071 1610.78 18.3401 1621.38 11.6371C1648.41 -7.80149 1675.01 3.53769 1684.93 11.6371C1704.31 25.2665 1720.92 17.316 1726.8 11.6371C1740.93 3.2584 1768.67 -4.56172 1792.88 11.6371C1812.25 24.5962 1829.2 19.0848 1835.26 14.7093Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        height: 1075px;
+
+        @include breakpoint (max-xl){
+            height: initial;
+            background-color: $bg-color-3;
+            mask: none;
+        }
+    }
+    .client-one{
+        position: absolute;
+        top: 26%;
+        left: 21%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }  
+    .client-two{
+        position: absolute;
+        top: 23%;
+        right: 17%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+    .client-three{
+        position: absolute;
+        bottom: 17%;
+        left: 6%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+    .client-four{
+        position: absolute;
+        bottom: 27%;
+        right: 4%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }  
+}
+
+
+.testimonial-section-4 {
+    position: relative;
+
+    .doll-shape{
+        position: absolute;
+        left: 24%;
+        top: 15%;
+        animation: rounded2 6s linear infinite;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+            left: 3%;
+        }
+    }
+    .flower-shape{
+        position: absolute;
+        right: 26%;
+        top: 25%;
+        animation: cir36 9s linear infinite;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+            right: 3%;
+        }
+    }
+}
+
+
+ .testimonial-wrapper{
+    position: relative;
+
+    .swiper-slide{
+        padding: 0 15px;
+    }
+        
+    .testimonial-box-items {
+        position: relative;
+        margin-top: 30px;
+
+        @include breakpoint (max-xl){
+            max-width: 346px;
+            margin: 30px auto 0;
+        }
+
+        .testimonial-item{
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0 30px;
+
+            .client-image{
+                display: flex;
+                gap: 20px;
+
+                img {
+                    margin-left: -44px;
+                    margin-top: -15px;
+                } 
+                .icon{
+                    gap: 5px;
+                    margin-top: 15px;
+                    @include flex;
+                    li{
+                        color: $theme-color-2;
+                    }
+                }  
+            }
+            
+            .testi-text{
+                font-size: 20px;
+                font-weight: 600;
+                padding-bottom: 25px;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                border-bottom: 1px dashed $theme-color-2;
+            }
+            .client-info{
+                h4{
+                    font-weight: 900;
+                }
+
+                h3{
+                    font-weight: 900;
+                    font-size: 18px;
+                }
+            }
+            .koma-icon{
+                position: absolute;
+                right: -13px;
+                bottom: -17px;
+            }
+        }
+        
+    }
+    .array-button{
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        .array-prev{
+            position: absolute;
+            left: -100px;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+        .array-next{
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+.testimonial-wrapper-2 {
+    position: relative; 
+
+    .testimonial-box-items {
+        position: relative;
+        margin: 30px auto 0;
+
+        @include breakpoint (max-xl){
+            max-width: 375px;
+            margin-top: 60px;
+        }
+
+        .testi-item-bg{
+            position: relative;
+        }
+        
+        .testimonial-content {
+            padding: 0 60px 0 60px;
+            text-align: center;
+            position: absolute;
+            top: -30px;
+            left: -25px;
+
+            .client-image-2{
+                .icon{
+                    gap: 5px;
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    margin-top: 15px;
+                    @include flex;
+                    li{
+                        i{
+                            color: $theme-color-2;
+                        }
+                    }
+                }
+            }
+            .client-info-2{
+                margin-top: 15px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $body-font;
+            }
+        }
+    }
+    .array-button{
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        .array-prev{
+            position: absolute;
+            left: -100px;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+        .array-next{
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+.testimonial-wrapper-3{
+    padding-bottom: 20px;
+
+    .testimonial-box-area-3 {
+        @include breakpoint (max-lg){
+            background-color: $theme-color-2;
+            padding: 50px 30px;
+            border-radius: 16px;
+        }
+
+        @include breakpoint (max-md){
+            margin-top: 30px;
+        }
+
+        .testimonial-box-3{
+            position: relative;
+            text-align: center;
+            padding: 80px 120px 56px 120px;
+            margin-top: 45px;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-lg){
+              padding: 0;
+              margin: 0;
+
+            }
+
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                background-color: $theme-color-2;
+                transition: all 500ms ease;
+                mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 886 329"><path d="M70.6818 34.0891C50.21 35.0426 31.1529 41.2402 17.9211 51.2518C4.68936 61.2634 -1.63526 74.2414 0.361987 87.2724L29.3222 274.526C33.067 298.84 64.69 317.592 103.137 318.28L713.296 328.981C748.83 329.616 780.287 314.52 789.191 292.642L883.561 60.7337C889.719 45.5839 884.06 29.4806 868.332 17.4561C852.604 5.4316 828.72 -1.0309 804.254 0.134468L70.6818 34.0891Z" /></svg>');
+                mask-repeat: no-repeat;
+                mask-position: center center;
+                mask-size: cover;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                max-width: 885px;
+                margin: 0 auto;
+                height: 329px;
+
+                @include breakpoint (max-lg){
+                  display: none;
+                }
+            }
+            .client-img {
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translate(-50%);
+
+                @include breakpoint (max-lg){
+                    position: static;
+                    transform: initial;
+                    margin-bottom: 30px;
+                }
+            }
+            .testimonial-content-3{
+                padding: 0 205px;
+
+                @include breakpoint (max-xl){
+                    padding: 0 70px;
+                }
+
+                 @include breakpoint (max-lg){
+                    padding: 0 0;
+                }
+
+                .icon{
+                    justify-content: center;
+                    gap: 5px;
+                    @include flex;
+                    margin-bottom: 15px;
+
+                    li{
+                        color: $white;
+                    }
+                }
+                p{
+                    font-size: 22px;
+                    line-height: 170%;
+                    color: $white;
+
+                    @include breakpoint (max-sm){
+                        font-size: 17px;
+                    }
+                }
+            }
+            .koma-icon{
+                position: absolute;
+                top: -10%;
+                right: 14%;
+
+                @include breakpoint (max-lg){
+                    display: none;
+                }
+            }
+        }
+        .client-name{
+            text-align: center;
+            @include breakpoint (max-lg){
+                margin-top: 20px;
+            }
+            h4{
+                color: $white;
+            }
+
+            h3{
+                color: $white;
+                font-size: 18px;
+                margin-bottom: 5px;
+                font-family: $body-font;
+            }
+            p{
+                color: $white;
+                font-weight: 400;
+                font-size: 16px;
+
+                @include breakpoint (max-sm){
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .testimonial-array{
+        z-index: 9;
+
+        @include breakpoint (max-xxl){
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .array-prev{
+            position: absolute;
+            top: 57%;
+            left: 17%;
+            z-index: 99;
+
+            @include breakpoint (max-xxxl){
+                left: 13%;
+            }
+
+             @include breakpoint (max-xxl){
+                position: static;
+            }
+        }
+        .array-next{
+            position: absolute;
+            top: 57%;
+            right: 17%;
+            z-index: 99;
+
+            @include breakpoint (max-xxl){
+                position: static;
+            }
+        }
+    }
+}
+
+
+.testimonial-wrapper-4{
+    position: relative;
+
+    .swiper-wrapper{
+        position: relative;
+        padding-bottom: 322px;
+        padding-top: 60px;
+
+        @include breakpoint (max-xl){
+            padding: 0;
+        }
+    }
+
+    .testimonial-items-4{
+        position: relative;
+        text-align: center;
+
+        @include breakpoint (max-xl){
+            background-color: #FDEBE4;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .test-box-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background-color: #FDEBE4;
+            transition: all 500ms ease;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 249"><path   d="M131.352 0.837267C166.359 0.639441 212.216 -5.29905 237.965 17.5446C264.719 41.2795 268.813 79.5794 269.889 114.598C270.998 150.699 264.054 203.439 237.965 229.382C211.488 255.71 169.371 246.79 131.352 248.389C91.3384 250.072 47.0661 250.256 20.2754 221.581C-5.7936 193.679 -0.425215 152.017 2.64371 114.598C5.39126 81.0963 -4.50211 45.8604 20.2754 22.2C44.9629 -1.37452 96.5877 1.03372 131.352 0.837267Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            height: 252px;
+
+            @include breakpoint (max-xl){
+                display: none;
+            }
+            
+            &.style-2{
+                background-color: #DBFFF9;
+            }
+            &.style-3{
+                background-color: #F7FAE2;
+            }
+        }
+        
+        .client-img-box{
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translate(-50%);
+
+            @include breakpoint (max-xl){
+                position: static;
+                transform: initial;
+            }
+
+            .client-img{
+                position: relative;
+
+                .koma-shape{
+                    position: absolute;
+                    right: -36px;
+                    top: 10px;
+
+                     @include breakpoint (max-xl){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .test-content{
+            padding: 0 13px 0;
+            z-index: 22;
+            position: absolute;
+            top: 48px;
+
+             @include breakpoint (max-xl){
+                position: static;
+                transform: initial;
+                padding: 0;
+            }
+                
+            .icon{
+                gap: 2px;
+                justify-content: center;
+                margin-bottom: 10px;
+                margin-top: 15px;
+                @include flex;
+                li{
+                    i{
+                        color: $theme-color-2;
+                    }
+                }
+            }
+            .client-content {
+                text-align: center;
+                padding-top: 50px;
+
+                @include breakpoint (max-xl){
+                    padding-top: 18px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    font-family: $body-font;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .array-button{
+        .array-prev{
+            position: absolute;
+            left: -100px;
+            top: 55%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+        .array-next{
+            position: absolute;
+            right: -100px;
+            top: 55%;
+            z-index: 2;
+            transform: translateY(-50%);
+        }
+    }
+} 
+
+
+.testimonial-box-items-inner {
+    position: relative;
+
+    @include breakpoint (max-xl){
+        max-width: 346px;
+        margin: 30px auto 0;
+    }
+
+    .testimonial-item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 30px;
+
+        .client-image{
+            display: flex;
+            gap: 20px;
+
+            img {
+                margin-left: -44px;
+                margin-top: -15px;
+            } 
+            .icon{
+                gap: 5px;
+                margin-top: 15px;
+                @include flex;
+                li{
+                    color: $theme-color-2;
+                }
+            }  
+        }
+        
+        .testi-text{
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 25px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            border-bottom: 1px dashed $theme-color-2;
+        }
+        .client-info{
+            h2{
+                font-weight: 900;
+                font-size: 18px;
+            }
+        }
+        .koma-icon{
+            position: absolute;
+            right: -13px;
+            bottom: -17px;
+        }
+    }
+    
+}

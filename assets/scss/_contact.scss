@@ -1,0 +1,348 @@
+.contact-section{
+    position: relative;
+
+    .section-title-area {
+        @include breakpoint (max-lg){
+            text-align: center;
+            padding-bottom: 20px;
+            gap: 20px;
+        }
+    }
+
+    .perasute-shape{
+        position: absolute;
+        top: -10%;
+        left: 3%;
+        z-index: 2;
+    }
+
+    .star-shape{
+        position: absolute;
+        top: 35%;
+        right: 14%;
+        animation: zoom 1s linear infinite;
+    }
+    .emoji-shape{
+        position: absolute;
+        bottom: 10%;
+        right: 6%;
+    }
+
+     @include breakpoint (max-xl){
+         background-color: $theme-color-2;
+         overflow: hidden;
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: $theme-color-2;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1882 875"><path   d="M1892.99 68.7146C1907 71.875 1916.83 82.5416 1920 87.4798L1920 875.001L-4.02e-07 875L0.00221079 24.2689C40.5128 0.565479 71.5208 37.1083 75.0217 61.7994C100.628 32.1701 130.036 50.4415 141.539 63.2808C203.055 0.565511 261.57 45.0095 280.075 83.5276C298.48 60.2192 316.752 73.8158 323.586 83.5276C331.088 65.2562 361.096 60.318 372.099 83.5276C386.503 45.9971 414.443 50.7707 426.613 57.8489C443.618 -26.5946 555.147 -9.80473 558.148 59.8242C582.154 48.9601 602.159 52.9107 619.664 70.6882C660.874 37.1084 696.851 59.6595 709.687 75.1327C731.193 50.4416 778.205 41.5528 808.713 75.1327C849.523 55.7749 868.061 79.5771 872.229 93.8979C892.235 58.8366 925.743 70.1945 937.246 75.1327C982.058 34.8369 1022.6 58.3428 1037.27 75.1327C1061.78 45.0096 1104.79 45.0096 1125.79 71.676C1144.6 48.7627 1174.64 52.9108 1187.31 57.849C1198.31 -13.7552 1306.84 -24.6192 1318.34 57.849C1361.55 44.8121 1374.03 74.1451 1374.86 90.4412C1386.36 85.0092 1395.36 87.9721 1405.37 95.8733C1428.97 71.3798 1455.55 77.4374 1465.88 83.5278C1489.89 21.8001 1570.91 14.8866 1605.92 68.7131C1631.12 44.2196 1659.76 53.8985 1670.94 61.7996C1681.94 22.2939 1729.95 6.49166 1765.96 32.6656C1796.97 -17.2118 1887.99 -13.261 1892.99 68.7146Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        height: 100%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+}  
+
+.contact-section-two{
+    position: relative;
+    z-index: 9;
+
+    &::before{
+        background-color: #FAF5F2;
+        mask-position: top center;
+        top: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1882 875"><path   d="M1892.99 68.7146C1907 71.875 1916.83 82.5416 1920 87.4798L1920 875.001L-4.02e-07 875L0.00221079 24.2689C40.5128 0.565479 71.5208 37.1083 75.0217 61.7994C100.628 32.1701 130.036 50.4415 141.539 63.2808C203.055 0.565511 261.57 45.0095 280.075 83.5276C298.48 60.2192 316.752 73.8158 323.586 83.5276C331.088 65.2562 361.096 60.318 372.099 83.5276C386.503 45.9971 414.443 50.7707 426.613 57.8489C443.618 -26.5946 555.147 -9.80473 558.148 59.8242C582.154 48.9601 602.159 52.9107 619.664 70.6882C660.874 37.1084 696.851 59.6595 709.687 75.1327C731.193 50.4416 778.205 41.5528 808.713 75.1327C849.523 55.7749 868.061 79.5771 872.229 93.8979C892.235 58.8366 925.743 70.1945 937.246 75.1327C982.058 34.8369 1022.6 58.3428 1037.27 75.1327C1061.78 45.0096 1104.79 45.0096 1125.79 71.676C1144.6 48.7627 1174.64 52.9108 1187.31 57.849C1198.31 -13.7552 1306.84 -24.6192 1318.34 57.849C1361.55 44.8121 1374.03 74.1451 1374.86 90.4412C1386.36 85.0092 1395.36 87.9721 1405.37 95.8733C1428.97 71.3798 1455.55 77.4374 1465.88 83.5278C1489.89 21.8001 1570.91 14.8866 1605.92 68.7131C1631.12 44.2196 1659.76 53.8985 1670.94 61.7996C1681.94 22.2939 1729.95 6.49166 1765.96 32.6656C1796.97 -17.2118 1887.99 -13.261 1892.99 68.7146Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+         height: 80%;
+
+         @include breakpoint (max-xl){
+            mask: none;
+            height: 100%;
+         }
+
+    }
+}
+
+.contact-wrapper{
+    margin-top: 30px;
+    position: relative;
+    z-index: 99;
+
+    .contact-info{
+        gap: 30px;
+        display: flex;
+
+        @include breakpoint (max-lg){
+            gap: 20px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+            @include breakpoint (max-lg){
+                margin-bottom: 20px;
+            }
+        }
+        .content{
+            h4{
+                font-weight: 600;
+                color: $white;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                font-weight: 600;
+                color: $white;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+    .contact-from{
+        h3 {
+             @include breakpoint (max-lg){
+                    text-align: center;
+                }
+        }
+        form {
+            display: initial;
+        }
+        .inptFld {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            border-radius: 4px;
+            padding: 0 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: $black;
+        }
+        .contFrm textarea {
+            height: 180px;
+            padding-top: 5px;
+            &.inptFld-2{
+                height: 150px;
+            }
+            &.inptFld-3{
+                height: 120px;
+            }
+        }
+        textarea:focus{
+            outline: none;
+        }
+        .contact-button{
+            margin-top: 20px;
+            .style-2{
+                background-color: #FFE800;
+                color: #1C1C1C;
+                &:hover{
+                     color: $white;
+                }
+            }
+        }   
+    }
+}
+
+
+.contact-wrapper-two{
+    .contact-from-two{
+        background-color: $bg-color-3;
+        padding: 55px 70px 70px;
+        border-radius: 14px;
+
+        @include breakpoint (max-xl){
+            padding: 40px;
+        }
+
+        @include breakpoint (max-md){
+            padding: 33px;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 30px;
+        }
+
+        h3{
+            font-size: 32px;
+        }
+
+         h2{
+            font-size: 32px;
+        }
+        .contFrm-two{
+            span{
+                color: $white;
+                font-size: 15px;
+                margin-bottom: 5px;
+                text-transform: capitalize;
+            }
+        }
+        &.contact-from-three{
+            padding: 30px 50px 60px 50px;
+        }
+    }
+    .contact-info-items{
+        margin-left: 30px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+        
+        .contact-info-two{
+            margin-top: 24px;
+            &:not(:last-child){
+                margin-bottom: 0;
+            }
+            .icon{
+                background-color: $theme-color;
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+                text-align: center;
+                border-radius: 50%;
+
+                @include breakpoint (max-lg){
+                    margin: 0 auto;
+                }
+            }
+            .content{
+                span{
+                    font-size: 15px;
+                }
+                h5{
+                    font-weight: 600;
+                }
+
+                h3{
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $header-color;
+                }
+            }
+        }
+    }
+}
+
+
+.newsletter-section{
+    position: relative;
+}
+
+.newsletter-two{
+    position: relative;
+}
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+}
+
+.signUp-box  {
+    form {
+        @include flex;
+        gap: 10px;
+        justify-content: center;
+
+        @include breakpoint (max-sm){
+            display: block;
+        }
+    }
+    input[type="email"] {
+        padding: 13px 20px;
+        border: none;
+        width: 100%;
+        outline: none;
+        color: $text-color;
+        font-size: 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(30, 30, 28, 0.15);
+    }
+
+    input[type="email"]::placeholder {
+        color: $text-color;
+    }
+
+    .theme-btn {
+       @include breakpoint (max-sm){
+         width: 100%;
+        text-align: center;
+        margin-top: 20px;
+       }
+    }
+}
+
+    
+.house-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: $text-color;
+    pointer-events: none;
+}
+
+.newsletter-image{
+    margin-top: 50px;
+    img{
+        @include imgw;
+    }
+}
+
+.input-style{
+    input[type="email"] {
+        background-color: $white;
+    }
+}
+   
+
+.map-section{
+    position: relative;
+    margin-bottom: -100px; 
+}
+.map-items {
+    .googpemap {
+        iframe {
+            width: 100%;
+            height: 600px;
+
+            @include breakpoint (max-sm){
+                height: 400px;
+            }
+        }
+    }
+}
+
+

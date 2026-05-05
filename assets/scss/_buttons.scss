@@ -1,0 +1,112 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: $theme-color-2;
+    font-family: "Quicksand", sans-serif;
+    text-transform: capitalize;
+    padding: 0 30px;
+    color: $white;
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    vertical-align: middle;
+    border: none;
+    outline: none !important;
+    @include transition;
+
+    @include breakpoint (max-sm){
+      font-size: 14px;
+    }
+
+  i {
+     margin-left: 10px;
+     font-size: 11px;
+  }
+
+
+  &::before {
+    content: "";
+    height: 0px;
+    width: 0px;
+    background-color: $header-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $white;
+
+    &::before {
+        height: 400px;
+        width: 200%;
+        top: -70%;
+        left: -46%;
+    }
+  }
+}
+
+/*--- theme two ---*/
+.theme-two {
+    border: 1px solid $theme-color-2;
+    color: $theme-color-2;
+    background-color: transparent;
+    &::before {
+      background-color: $theme-color-2;
+    }
+    &:hover {
+      &::before {
+        border: 1px solid transparent;
+      }
+  }
+}
+//>>>>> Component Button End <<<<<//
+
+
+//>>>>> border Button End <<<<<//
+.border-btn {
+    font-size: 15px;
+    font-weight: 700;
+    color: $theme-color-2;
+    text-transform: capitalize;
+    display: inline-block;
+    font-family: "Quicksand", sans-serif;
+    border: 1px solid $theme-color-2;
+    padding: 0 30px;
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 16px;
+    @include transition;
+
+    &:hover {
+        color: $white;
+        background-color: $theme-color-2;
+        border-bottom: 1px solid transparent;
+    }
+    &.active{
+        color: $white;
+        background-color: $theme-color-2;
+        border-bottom: 1px solid transparent;
+    }
+    i {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+} 
+.btn-style-2{
+    color: $white;
+    background-color: $theme-color-2 !important;
+    border-bottom: 1px solid transparent;
+} 
+//>>>>> border Button End <<<<<//
+
+ 

@@ -1,0 +1,702 @@
+.classes-section{
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: $theme-color;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 944"><path   d="M1835.26 14.7351C1868.35 -11.2281 1905.54 6.90141 1920 19.2116L1919.87 944L-8.25271e-05 944L0.13391 10.2586C23.5396 -5.18508 48.2231 3.82371 57.6392 10.2586C75.7987 24.3593 92.1086 20.2372 97.9937 16.4136C127.452 -6.19225 153.649 1.21248 163.065 7.74058C185.664 23.8557 201.738 20.2373 206.951 16.4137C238.427 -5.07314 264.456 1.67878 273.536 7.74059C293.309 23.8557 308.005 20.2373 312.881 16.4137C344.358 -5.96841 369.041 1.30576 377.449 7.7406C396.415 23.6319 415.617 20.144 422.847 16.4137C452.306 -5.07312 479.512 1.6788 489.432 7.74061C509.206 26.3177 527.937 21.2631 534.831 16.4137C562.676 -7.0875 592.168 2.70466 603.434 10.5384C619.172 23.52 632.186 19.8643 636.726 16.4137C667.799 -6.63985 692.718 -0.466125 701.294 5.50243C721.471 25.6463 741.648 21.1699 749.215 16.4137C779.884 -6.86366 806.047 2.61142 815.295 10.2586C837.086 25.2546 855.313 18.9317 861.703 13.8957C891.969 -7.59104 919.04 2.51819 928.792 10.2586C943.32 25.2546 959.731 18.9317 966.12 13.8958C995.983 -7.14339 1023.29 2.70471 1033.21 10.2587C1053.79 25.7023 1071.04 19.1182 1077.1 13.8958C1103.33 -7.14338 1133.76 2.70472 1145.7 10.2587C1163.05 27.269 1182.52 18.8385 1190.09 12.4969C1215.51 -6.30407 1242.38 3.17101 1252.64 10.2587C1267.97 24.5832 1284.92 18.652 1291.48 13.8958C1313.67 -5.35281 1339.74 0.653055 1349.99 6.06206C1371.38 25.0868 1392.53 19.2115 1400.44 13.8958C1424.65 -5.80044 1452.22 1.77217 1462.99 8.0205C1486.39 27.0453 1504.35 19.8644 1510.4 13.8958C1532.19 -4.4575 1558.49 1.02611 1568.92 6.06208C1585.46 26.6536 1610.78 18.3722 1621.38 11.6576C1648.41 -7.81482 1675.01 3.54409 1684.93 11.6576C1704.31 25.3107 1720.92 17.3464 1726.8 11.6576C1740.93 3.26432 1768.67 -4.56941 1792.88 11.6576C1812.25 24.6392 1829.2 19.1183 1835.26 14.7351Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .perasute-shape{
+        position: absolute;
+        top: 16%;
+        left: 25%;
+    }
+    .crown-shape{
+        position: absolute;
+        top: 23%;
+        right: 16%;
+        animation: rounded 6s linear infinite;
+    }
+    .star-shape{
+        position: absolute;
+        top: 59%;
+        left: 3%;
+        animation: zoom 1s linear infinite;
+    }
+    .zikzak-shape{
+        position: absolute;
+        bottom: 10%;
+        left: 8%;
+        animation: rounded2 6s linear infinite;
+    }
+    .border-shape{
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        animation: wind-blow 5s linear infinite;
+    }
+} 
+
+.breadcrumb-classes{
+    &::before{
+        content: none;
+    }
+}
+
+.classes-section-two{
+    position: relative;
+    background-image: url(../img/classes/clsss-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @include breakpoint (max-xl){
+        background-image: none;
+        background-color: $theme-color;
+    }
+
+    &::before{
+        content: none;
+    }
+    .classes-wrapper{
+        background-color: $theme-color;
+        padding-bottom: 120px;
+        .love-shape{
+            position: absolute;
+            left: 5%;
+            top: 37%;
+        }
+        .border-shape{
+            position: absolute;
+            top: 37%;
+            right: 0;
+            animation: wind-blow 5s linear infinite;
+        }
+    }
+}
+
+.classes-section-three{
+    position: relative;
+    .zikzak-shape2{
+        position: absolute;
+        bottom: 23%;
+        left: 9%;
+        animation: rounded2 5s linear infinite;
+    }
+    .swiper-slide{
+        margin-bottom: 45px;
+
+        @include breakpoint (max-xxl){
+            margin-bottom: 20px;
+        }
+
+         @include breakpoint (max-xl){
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.classes-box-item {
+    position: relative;
+    background-color: $white;
+    border-radius: 16px;
+    margin-top: 30px;
+    overflow: hidden;
+    @include transition;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #FDF948;
+        transform: scale(0);
+        transform-origin: bottom left; 
+        z-index: 0;
+        @include transition;
+    }
+
+    .classes-image {
+        position: relative;
+        padding: 20px 20px 0 20px;
+
+        .date-box {
+            position: absolute;
+            top: 13%;
+            left: 10%;
+            background-color: $theme-color;
+            padding: 10px 12px;
+            border-radius: 10px;
+            line-height: 1;
+
+            span {
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .classes-content {
+        padding: 30px;
+        position: relative;
+        z-index: 1;
+        .location {
+            margin-bottom: 15px;
+
+            span {
+                color: $text-color;
+
+                i {
+                    color: $theme-color-2;
+                }
+            }
+        }
+
+        h3 {
+            border-bottom: 1px dashed $theme-color-2;
+            padding-bottom: 30px;
+
+            a {
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $theme-color-2;
+                }
+            }
+        }
+
+          h2 {
+            border-bottom: 1px dashed $theme-color-2;
+            padding-bottom: 30px;
+            font-size: 22px;
+
+            a {
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $theme-color-2;
+                }
+            }
+        }
+
+        .classes-rate {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            @include breakpoint (max-lg){
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .rate {
+                ul {
+                    display: flex;
+                    gap: 5px;
+
+                    li {
+                        i {
+                            color: $theme-color-2;
+                            font-size: 16px;
+                        }
+
+                        &:last-child {
+                            i {
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .theme-btn {
+            border: 1px solid $theme-color-2;
+            background-color: transparent;
+            border-radius: 22px;
+            color: $theme-color-2;
+
+            &::before {
+                background-color: $theme-color;
+            }
+
+            &:hover {
+                color: $white;
+                border: 1px solid $theme-color;
+            }
+        }
+    }
+
+    &:hover{
+        transform: translateY(-8px);
+        @include transition;
+        &::before {
+            transform: scale(1);
+            @include transition;
+        }
+
+        .theme-btn {
+            background-color: $theme-color-2;
+            color: $white;
+            border: 1px solid $theme-color-2;
+        }
+    }
+    &.active{
+        &::before {
+            transform: scale(1);
+            @include transition;
+        }
+
+        .theme-btn {
+            background-color: $theme-color-2;
+            color: $white;
+            border: 1px solid $theme-color-2;
+        }
+    }
+} 
+
+
+.classes-activitis-items{
+    position: relative;
+    padding: 50px 22px 22px;
+    margin-top: 30px;
+    z-index: 2;
+    @include transition;
+
+    @include breakpoint (max-xl){
+        border-radius: 10px;
+        padding: 30px;
+        padding-top: 0;
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: $white;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 616"><path   d="M7.69014 34.1622C7.69014 34.1622 2.04067 48.808 6.56025 244.761C11.0798 440.693 -34.2042 611.576 64.068 614.281C162.34 616.986 278.579 616.12 313.562 614.281C348.546 612.442 370 636.26 370 511.739C370 387.219 370 235.589 368.87 147.693C367.74 59.7976 376.694 16.6211 336.103 13.4933C295.499 10.3655 190.533 4.87065 145.394 3.032C100.256 1.19335 12.2097 -11.6138 7.69014 34.1622Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        @include breakpoint (max-xl){
+            border-radius: 10px;
+            background-color: $white;
+            mask: none;
+            top: 23px;
+            height: initial;
+        }
+    }
+
+    .arrow-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -70px;
+        position: relative;
+        z-index: 2;
+
+         @include breakpoint (max-xl){
+           margin-top: 0;
+        }
+
+        a{
+            background-color: $theme-color-2;
+            width: 50px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            border-radius: 14px;
+            i{
+                color: $white;
+            }
+        }
+    }
+    
+    .classes-activitis-content{
+        padding: 14px 22px 0;
+
+        @include breakpoint (max-xl){
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .classes-top{
+            border-bottom: 2px dashed rgba(241, 95, 37, 0.37);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+
+            h4{
+                color: $theme-color-2;
+                margin-bottom: 5px;
+            }
+
+            span {
+                 color: $theme-color-2;
+                margin-bottom: 5px;
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $heading-font;
+            }
+
+            h3{
+                font-size: 28px;
+                margin-bottom: 10px;
+                &:hover a{
+                    color: $theme-color-2;
+                }
+            }
+
+             h2{
+                font-size: 28px;
+                margin-bottom: 10px;
+                &:hover a{
+                    color: $theme-color-2;
+                }
+            }
+           
+        }
+        .classes-list{
+            margin-bottom: 15px;
+
+            li {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+
+                i{
+                    margin-right: 10px;
+                    color: $white;
+                    height: 17px;
+                    width: 17px;
+                    font-size: 10px;
+                    line-height: 17px;
+                    margin-bottom: 2px;
+                    text-align: center;
+                    background-color: $theme-color;
+                    border-radius: 50%;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }    
+    .classes-activitis-image{
+        position: relative;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 215"><path d="M7.13773 13.1475C7.13773 13.1475 2.23329 18.7869 6.1599 94.199C10.0865 169.611 -30.2797 209.827 55.1279 210.867C140.536 211.907 242.551 215.426 272.956 214.726C303.36 214.016 322 223.185 322 175.261C322 127.336 322 90.6794 321.022 56.8529C320.044 23.0265 327.821 6.40825 292.543 5.19837C257.264 3.9885 166.036 1.87872 126.8 1.16879C87.5645 0.458865 11.0491 -4.47062 7.13773 13.1475Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        overflow: visible;
+        z-index: 1;
+        height: 214px;
+        transition: all 2s ease-in-out;
+
+         @include breakpoint (max-xl){
+            mask: none;
+        }
+
+        img{
+            @include transition;
+            
+            @include breakpoint (max-xl){
+                @include imgw;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }   
+    &:hover{
+        .arrow-icon{
+            a{
+                background-color: $bg-color-3;
+            }
+        }
+        .classes-activitis-image{
+            img{
+                transform: scale(1.1);
+                @include transition;
+            }
+        }
+    } 
+}
+
+.classes-wrapper-three{
+    .classes-array{
+        .array-prev{
+            background-color: transparent;
+            border: 1px solid $white;
+            &:hover{
+                border: 1px solid transparent;
+            }
+        }
+        .array-next{
+            background-color: $theme-color-2;
+            &:hover{
+                border: 1px solid $white;
+                background-color: transparent;
+            }
+        }
+    }
+    .classes-slider{
+        .classes-items-three{
+            padding: 30px 22px 0px;
+            @include breakpoint (max-xl){
+                padding: 20px 20px;
+                background-color: $white;
+                border-radius: 10px;
+
+                &::before {
+                    display: none;
+                }
+            }
+            &::before{
+                height: 609px;
+
+                @include breakpoint (max-xl){
+                    height: initial;
+                }
+            }
+            .date-box{
+                position: absolute;
+                top: 7%;
+                left: 10%;
+                background-color: $theme-color;
+                padding: 5px 15px;
+                border-radius: 10px;
+                z-index: 2;
+                span{
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 400;
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .classes-content-three{
+                padding: 18px 10px 10px;
+                .classes-top{
+                        padding-bottom: 25px;
+                        margin-bottom: 30px;
+                    span{
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        color: $text-color;
+                        font-weight: 500;
+                        i{
+                            color: $theme-color-2;
+                            margin-right: 5px;
+                        }
+                    }
+                    h3{
+                        font-size: 22px;
+                        margin-bottom: 15px;
+
+                        @include breakpoint (max-lg){
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .classes-time {
+                    @include flex;
+                    justify-content: space-between;
+                
+                    li{
+                        span{
+                            color: $theme-color-2;
+                            margin-bottom: 5px;
+                            display: inline-block;
+                        }
+
+                        h4 {
+                            color: $header-color;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.classes-info-section{
+    position: relative;
+}
+
+.classes-info-wrapper{
+    padding: 100px 0 70px;
+
+    @include breakpoint (max-lg){
+        padding-top: 80px;
+    }
+
+    .classes-video-box{
+        .classes-image{
+            position: relative;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282 179"><path d="M6.25106 10.9461C6.25106 10.9461 1.95586 15.6412 5.39469 78.4262C8.83353 141.211 -26.5182 174.693 48.2798 175.559C123.078 176.425 212.42 179.355 239.048 178.772C265.676 178.181 282 185.815 282 145.915C282 106.014 282 75.4959 281.144 47.3334C280.287 19.1709 287.098 5.33524 256.202 4.32795C225.306 3.32066 145.41 1.56414 111.049 0.973086C76.6869 0.382032 9.67651 -3.72205 6.25106 10.9461Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            overflow: visible;
+            z-index: 1;
+            height: 166px;
+
+            @include breakpoint (max-xl){
+                mask: none;
+                height: initial;
+
+                img {
+                    @include imgw;
+                    border-radius: 12px;
+                }
+            }
+
+            .classes-info-wave{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .vw-style{
+                    background-color: $white;
+                }
+                .video-icon{
+                    background-color: $white;
+                    &::before{
+                        border: 1px solid transparent;
+                    }
+                    i{
+                        color: $theme-color;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .classes-counter-box {
+        position: relative;
+        padding: 24px 40px;
+
+        @include breakpoint (max-xl){
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background-color: $white;
+            transition: all 500ms ease;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282 179"><path d="M6.25106 10.9461C6.25106 10.9461 1.95586 15.6412 5.39469 78.4262C8.83353 141.211 -26.5182 174.693 48.2798 175.559C123.078 176.425 212.42 179.355 239.048 178.772C265.676 178.181 282 185.815 282 145.915C282 106.014 282 75.4959 281.144 47.3334C280.287 19.1709 287.098 5.33524 256.202 4.32795C225.306 3.32066 145.41 1.56414 111.049 0.973086C76.6869 0.382032 9.67651 -3.72205 6.25106 10.9461Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            height: 166px;
+
+            @include breakpoint (max-xl){
+                height: 100%;
+                mask: none;
+                border-radius: 12px;
+            }
+        }
+
+        .counter-box {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+
+            .count {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 1;
+                    color: $theme-color-2;
+                    font-family: "Love Ya Like A Sister", Sans-serif;
+                }
+
+                .plus {
+                    font-size: 80px;
+                    font-weight: 400;
+                    line-height: 1;
+                    color: $theme-color-2;
+                    font-family: "Love Ya Like A Sister", Sans-serif;
+                }
+            }
+
+            p {
+                color: #4B5563;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+    .classes-info-buttton{
+         @include breakpoint (max-md){
+            text-align: center;
+        }
+
+        p{
+            font-size: 22px;
+            color: $white;
+            margin-bottom: 30px;
+            line-height: 155%;
+            text-transform: capitalize;
+            font-family: $heading-font;
+            font-weight: 600;
+
+            @include breakpoint (max-md){
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+}

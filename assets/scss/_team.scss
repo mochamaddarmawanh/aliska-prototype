@@ -1,0 +1,391 @@
+.team-section{
+    position: relative;
+ 
+    .flower-shape{
+        position: absolute;
+        left: 7%;
+        top: 32%;
+        animation: rounded 5s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+}
+
+.team-section-three{
+    position: relative;
+
+    @include breakpoint (max-xl){
+        .custom-padding-top {
+            padding-top: 0 !important;
+        }
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: #FAF5F2;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 938"><path   d="M0 938V69.1229V12.852C38.0396 40.9875 143.614 12.852 277.289 12.852C423 12.8521 552.217 -15.2833 664 12.8523C806.815 54.2739 1257.86 12.852 1341 12.852C1472 12.852 1746.15 -16.065 1920 12.852V930.966C1750 874.925 1254 900.716 1138 900.716C885.21 900.716 608 912.44 396 900.716C69.2597 863.202 130 930.966 0 938Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 88%;
+        z-index: -1;
+
+        @include breakpoint (max-xl){
+            mask: none;
+
+        }
+    }
+    .light-shape{
+        position: absolute;
+        left: 5%;
+        top: 15%;
+        animation: rounded2 5s linear infinite;
+    }
+    .sun-shape{
+        position: absolute;
+        top: -5%;
+        right: 0;
+    }
+}
+
+
+.team-card-item{
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 9;
+
+    .team-image {
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+        
+    .team-content {
+        margin-top: 30px;
+
+
+        h3{
+            @include transition;
+            font-size: 22px;
+
+            &:hover a{
+                color: $theme-color-2;
+            }
+        }
+    }
+}
+
+.team-section-two {
+    @include breakpoint (max-xl){
+        .section-title {
+            text-align: center;
+        }
+    }
+}
+
+.team-box{
+    position: relative;
+    .team-image{
+        position: relative;
+        z-index: -1;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 268"><path d="M5.61173 14.8628C5.61173 14.8628 1.48914 21.2346 4.78721 106.487C8.08528 191.73 -24.9598 266.075 46.7523 267.252C118.464 268.429 203.287 268.052 228.816 267.252C254.345 266.452 270 276.814 270 222.64C270 168.465 270 102.497 269.176 64.2562C268.351 26.0158 274.884 7.23125 245.264 5.87045C215.634 4.50965 139.037 2.11905 106.098 1.31912C73.1595 0.519186 8.90979 -5.05274 5.61173 14.8628Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        overflow: visible;
+        z-index: 1;
+
+        @include breakpoint (max-xl){
+            mask: none;
+            border-radius: 10px;
+
+            img {
+                @include imgw;
+                border-radius: 10px;
+            }
+        }
+    }
+    .social-profile{
+        position: absolute;
+        right: 20px;
+        bottom: 65px;
+        z-index: 20;
+        .social-icon{
+            display: grid;
+            gap: 5px;
+            margin-left: 4px;
+            margin-bottom: -22px;
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+            li{
+                opacity: 0;
+                transform: translateY(25px) scale(0.95);
+                transition: all 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+                &:nth-child(1) { transition-delay: 0.10s; }
+                &:nth-child(2) { transition-delay: 0.20s; }
+                &:nth-child(3) { transition-delay: 0.30s; }
+                &:nth-child(4) { transition-delay: 0.40s; }
+                a{
+                    height: 38px;
+                    width: 38px;
+                    line-height: 38px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: $theme-color;
+                    color: $white; 
+                    i{
+                        font-size: 15px;
+                    }
+                    &:hover{
+                        background-color: $theme-color-2;
+                    } 
+                }
+            }
+        }
+        .share-btn{
+            height: 48px;
+            width: 48px;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $theme-color;
+            color: $white;
+        }
+        &:hover{
+            .social-icon{
+                margin-bottom: 6px;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            li {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    }        
+    .team-content{
+        margin-top: 20px;
+
+         @include breakpoint (max-sm){
+            text-align: center;
+        }
+
+        h3{
+            a{
+                &:hover{
+                    color: $theme-color-2;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 22px;
+
+            a {
+                &:hover {
+                    color: $theme-color-2;
+                }
+            }
+        }
+    }
+}
+
+
+.team-wrapper{
+    .team-box-items{
+     margin-top: 30px;
+        .team-img{
+            position: relative;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 363"><path d="M5.61173 20.1313C5.61173 20.1313 1.48914 28.7618 4.78721 144.234C8.08528 259.694 -24.9598 360.393 46.7523 361.987C118.464 363.581 203.287 363.07 228.816 361.987C254.345 360.903 270 374.939 270 301.561C270 228.182 270 138.829 269.176 87.0336C268.351 35.2379 274.884 9.79457 245.264 7.95139C215.634 6.10821 139.037 2.8702 106.098 1.78671C73.1595 0.703226 8.90979 -6.84383 5.61173 20.1313Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            overflow: visible;
+            z-index: 1;
+            height: 360px;
+             transition: 0.5s;
+
+             @include breakpoint (max-xl){
+                mask: none;
+             }
+
+            img{
+                @include imgw;
+                transition: 0.5s;
+
+                 @include breakpoint (max-xl){
+                   border-radius: 12px;
+                   object-fit: cover;
+                }
+            }
+        }
+        .teams-content{
+            position: relative;
+
+            .Teacher-name{
+                text-align: center;
+                z-index: 2;
+                padding: 30px 20px 19px;
+                position: absolute;
+                top: -100px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                background-color: $white;
+                transition: all 500ms ease;
+                mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 105"><path   d="M741.297 10.0483C764.219 -7.65707 789.983 4.70619 800 13.101L799.907 201L-237.09 201L-530 201L-529.907 6.99557C-513.694 -3.53609 -496.595 2.60738 -490.073 6.99557C-477.494 16.6114 -466.196 13.8005 -462.119 11.193C-441.713 -4.22292 -423.566 0.826673 -417.043 5.27846C-401.389 16.268 -390.254 13.8005 -386.644 11.193C-364.839 -3.45975 -346.809 1.14467 -340.52 5.27847C-326.822 16.268 -316.642 13.8005 -313.264 11.193C-291.46 -4.07028 -274.362 0.890284 -268.538 5.27847C-255.4 16.1154 -242.099 13.7369 -237.09 11.193C-216.684 -3.45974 -197.838 1.14468 -190.966 5.27848C-177.269 17.947 -164.293 14.5 -159.518 11.193C-140.23 -4.83343 -119.8 1.84425 -111.996 7.18639C-101.094 16.0391 -92.0793 13.5461 -88.9344 11.193C-67.4099 -4.52816 -50.1483 -0.318038 -44.2081 3.75217C-30.2312 17.4891 -16.2542 14.4365 -11.0129 11.193C10.2321 -4.68079 28.3555 1.78067 34.7616 6.99562C49.8567 17.222 62.4826 12.9102 66.9086 9.47592C87.8741 -5.17681 106.627 1.71709 113.382 6.99563C123.446 17.222 134.814 12.9102 139.24 9.47592C159.926 -4.87154 178.841 1.84429 185.713 6.99564C199.969 17.5273 211.92 13.0374 216.113 9.47593C234.283 -4.87154 255.365 1.84429 263.635 6.99564C275.655 18.5957 289.142 12.8466 294.384 8.52197C311.995 -4.29918 330.607 2.16228 337.712 6.99565C348.335 16.7641 360.076 12.7194 364.618 9.47594C379.993 -3.65047 398.046 0.445178 405.151 4.1338C419.967 17.1076 434.619 13.101 440.094 9.47595C456.866 -3.95573 475.968 1.20835 483.422 5.46935C499.635 18.4431 512.075 13.5462 516.268 9.47596C531.363 -3.03993 549.58 0.69958 556.801 4.13382C568.262 18.176 585.803 12.5286 593.141 7.94963C611.87 -5.32942 630.296 2.41669 637.168 7.94963C650.586 17.2602 662.094 11.829 666.171 7.94963C675.955 2.22591 695.173 -3.11624 711.945 7.94964C725.363 16.8023 737.104 13.0374 741.297 10.0483Z" /></svg>');
+                mask-repeat: no-repeat;
+                mask-position: center center;
+                mask-size: cover;
+                width: 100%;
+                height: 100%;
+                height: 110px;
+                border-radius: 0 0 30px 30px;
+                @include transition;
+            }
+        }
+        &:hover{
+            .team-img{
+                img{
+                    transform: scale(1.1);
+                     transition: 0.5s;
+                }
+                 
+            }
+            .Teacher-name{
+                background-color: $theme-color-2;
+                @include transition;
+                h3{
+                   a{
+                     color: $white !important;
+                   }
+                }
+                p{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.team-details-wrap{
+    .team-details-image{
+        position: relative;
+        z-index: 9;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560"><path   d="M9.9764 31.0565C9.9764 31.0565 2.64736 44.3709 8.51059 222.51C14.3738 400.63 -44.373 555.978 83.1152 558.437C210.603 560.896 361.399 560.109 406.784 558.437C452.168 556.766 480 578.418 480 465.218C480 352.017 480 214.172 478.534 134.267C477.068 54.3614 488.684 15.1101 436.026 12.2666C383.349 9.42314 247.178 4.42786 188.619 2.75636C130.061 1.08487 15.8396 -10.558 9.9764 31.0565Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover; 
+        height: 560px; 
+        margin-right: 80px;
+
+        @include breakpoint (max-xl){
+            margin-right: 0;
+            mask: none;
+
+            img {
+                @include imgw;
+                border-radius: 12px;
+                object-fit: cover;
+            }
+        }
+
+        @include breakpoint (max-sm){
+            height: 450px;
+        }
+    }
+    .team-details-content{
+        margin-left: -50px;
+
+         @include breakpoint (max-xl){
+           margin-left: 0;
+        }
+
+        .learn{
+            color: #F15F25;
+        }
+        h2{
+            font-size: 44px;
+            margin-bottom: 12px;
+            line-height: 1;
+
+            @include breakpoint (max-md){
+                font-size: 36px;
+            }
+        }
+        .team-details-list{
+            @include flex;
+            gap: 70px;
+            margin-top: 40px;
+
+            @include breakpoint (max-xxl){
+                gap: 30px;
+            }
+
+             @include breakpoint (max-xl){
+                gap: 20px;
+                flex-wrap: wrap;
+                margin-top: 25px;
+            }
+
+            ul{
+                li{
+                    font-weight: 600;
+                    font-size: 16px;
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+                    span{
+                        margin-left: 12px;
+                        font-weight: 400;
+                    }
+                    a{
+                        margin-left: 12px;
+                        font-weight: 400;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+        .team-details-icon{
+            gap: 10px;
+            margin-top: 30px;
+            span{
+                color: $header-color;
+                font-weight: 600;
+                margin-right: 5px;
+            }
+            li{
+                a{
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    border: 1px solid $theme-color;
+                    color: $theme-color;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: $theme-color;
+                        border: 1px solid transparent;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

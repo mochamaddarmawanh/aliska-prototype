@@ -1,0 +1,430 @@
+.pricing-section{
+    position: relative;
+    
+    &::before{
+        background-color: #FAF5F2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -45% !important;
+    }
+    &::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $theme-color;
+        content: "";
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 685"><path   d="M0 684.634V50.4519V9.38052C38.0396 29.9163 143.614 9.3805 277.289 9.38052C423 9.38054 552.217 -11.155 664 9.38069C806.815 39.6138 1257.86 9.38052 1341 9.38052C1472 9.38052 1746.15 -11.7257 1920 9.38052V679.5C1750 638.596 1254 657.421 1138 657.421C885.21 657.421 608 665.978 396 657.421C69.2597 630.04 130 679.5 0 684.634Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 53%;
+        z-index: -1;
+    }
+    .snake-shape{
+        position: absolute;
+        left: 0;
+        top: 14%;
+        animation: wind-blow 5s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .crown-shape{
+        position: absolute;
+        left: 22%;
+        top: 9%;;
+        animation: rounded2 6s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .tubelight-shape{
+        position: absolute;
+        right: 12%;
+        top: 26%;
+        animation: rounded 6s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .busket-shape{
+        position: absolute;
+        left: 2%;
+        bottom: 15%;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .sky-shape{
+        position: absolute;
+        left: 24%;
+        bottom: 20%;
+        animation: rounded2 6s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .star-shape{
+        position: absolute;
+        right: 24%;
+        bottom: 23%;
+        animation: zoom 1s linear infinite;
+
+        @include breakpoint (max-xxl){
+            opacity: .2;
+        }
+    }
+    .flower-shape{
+        position: absolute;
+        right: 8%;
+        bottom: -28px;
+        animation: wind-blow 5s linear infinite;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+        }
+    }
+}
+
+.pricing-section-two{
+    position: relative;
+    &::before{
+        content: none;
+    }
+     &::after{
+        content: none;
+    }
+    .butterfly-shape{
+        position: absolute;
+        right: 5%;
+        top: 21%;
+
+        @include breakpoint (max-xxl){
+            opacity: .3;
+        }
+    }
+
+    .pricing-title  {
+        @include breakpoint (max-xl){
+             br {
+                display: none;
+            }
+
+            p {
+                max-width: 700px;
+            }
+        }
+        @include breakpoint (max-lg){
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            text-align: center;
+
+        }
+
+        .pricing-button {
+            @include breakpoint (max-md){
+                margin-top: 20px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+
+        }
+    }
+}
+
+.pricing-style{
+    margin-top: -65px;
+    padding: 185px 0 120px;
+}
+
+.pricing-style2 {
+    &::before {
+        display: none;
+    }
+}
+
+
+.pricing-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+
+    .pricing-header {
+        span {
+            color: $header-color;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: $heading-font;
+        }
+    }
+
+    &.pricing-wrapper-3 {
+        display: initial;
+        grid-template-columns:initial;
+        margin-top: initial;
+    }
+
+    @include breakpoint (max-xl){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    @include breakpoint (max-lg){
+         grid-template-columns: repeat(2, 1fr);
+    }
+
+     @include breakpoint (max-md){
+         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing-items{
+        position: relative;
+        background-color: $white;
+        border-radius: 32px ;
+        margin-top: 30px;
+        outline: 2px dashed rgba(241, 95, 37, 0.37);
+        outline-offset: -15px; 
+        border-radius: 32px 0 0 32px;
+
+        &.new-border {
+           @include breakpoint (max-xl){
+             border: 2px dashed rgba(241, 95, 37, 0.37) !important;
+           }
+        }
+
+        @include breakpoint (max-xl){
+            border-radius: 30px;
+            outline: none;
+            outline-offset: initial; 
+        }
+
+        .top-text{
+            background-color: #FFE800;
+            border-radius: 23px 23px 0 0;
+            text-align: center;
+            padding: 10px 0;
+            top: -45px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: $heading-font;
+        }
+
+        .pricing-content{
+            padding: 40px 10px 40px 40px;
+            border-radius: 32px;
+
+            @include breakpoint (max-xl){
+                padding: 25px;
+            }
+
+            .pricing-header{
+                margin-bottom: 15px;
+                h3{
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+            }
+            .pricing-rate{
+                margin-bottom: 5px;
+                h2{
+                    color: $theme-color;
+                    font-weight: bold;
+                    span{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $text-color;
+                    }
+                }
+            }
+            .pricing-list{
+                margin-bottom: 35px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    i{
+                        margin-right: 10px;
+                        color: $white;
+                        height: 17px;
+                        width: 17px;
+                        font-size: 10px;
+                        line-height: 17px;
+                        margin-bottom: 2px;
+                        text-align: center;
+                        background-color: $theme-color;
+                        border-radius: 50%;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        
+        &.items-two{
+            border-radius: 0 0 32px 32px;
+            margin-bottom: -45px;
+            margin-left: -15px;
+            margin-right: -15px;
+            z-index: 999;
+            outline-offset: -2px;
+
+            @include breakpoint (max-xl){
+                margin-top: 60px;
+                 outline-offset: initial;
+                 margin-left: 0;
+                 margin-right: 0;
+            }
+
+            @include breakpoint (max-md){
+                margin-top: 30px;
+            }
+
+            .top-text {
+                font-size: 18px;
+                font-weight: 600;
+                color: $header-color;
+                font-family: $heading-font;
+            }
+        }
+
+        &.items-three{
+            border-radius: 0 32px 32px 0;
+            z-index: -0;
+
+            @include breakpoint (max-xl){
+                border-radius: 30px;
+            }
+        }
+
+        &.style-margin {
+            @include breakpoint (max-xl){
+                margin-top: 30px !important;
+                margin-bottom: 0 !important;
+            }
+        }
+    } 
+}
+
+
+
+.pricing-title{
+    p{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .pricing-button{
+        display: grid;
+        a{
+            font-size: 22px;
+            i{
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
+        span{
+            font-size: 16px;
+            display: inline-flex;
+            margin-bottom: 10px;
+            color: #5C707E;
+        }
+
+    }
+}
+
+.pricing-wrapper-two{
+    .pricing-items-two{
+        outline: none;
+        position: relative;
+        margin-top: 30px;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background-color: #F7FAE2;
+            transition: all 500ms ease;
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 597"><path   d="M8.45479 28.7016C7.73472 31.575 7.30819 34.5291 6.96913 37.472C5.60833 49.2829 3.09458 91.5868 6.56025 237.212C11.0798 427.101 -34.2042 592.712 64.068 595.334C162.34 597.956 278.579 597.116 313.562 595.334C348.546 593.552 370 616.635 370 495.955C370 375.275 370 228.323 368.87 143.138C367.74 57.9532 376.694 16.1084 336.103 13.0771C295.499 10.0457 190.533 4.72042 145.394 2.93848C101.819 1.21825 18.2555 -10.4088 8.45479 28.7016Z" /></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center center;
+            mask-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+
+            @include breakpoint(max-xl){
+                mask: none;
+                border-radius: 12px;
+            }
+        }
+        &.style-two{
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 55px;
+            position: relative;
+            z-index: 88;
+            &::before{
+                mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 649"><path   d="M8.30416 31.8871C7.74138 34.5797 7.34944 37.3439 7.04111 40.0774C5.70031 51.964 3.0325 96.7285 6.56025 257.873C11.0798 464.302 -34.2042 644.339 64.068 647.189C162.34 650.039 278.579 649.126 313.562 647.189C348.546 645.252 370 670.345 370 539.154C370 407.962 370 248.21 368.87 155.605C367.74 63.001 376.694 17.5115 336.103 14.2161C295.499 10.9207 190.533 5.13157 145.394 3.19443C101.586 1.31437 17.3622 -11.4506 8.30416 31.8871Z" /></svg>');
+                background-color: #FFDEE4;
+                height: 642px;
+
+                @include breakpoint (max-xxl){
+                    height: 623px;
+                }
+
+                 @include breakpoint(max-xl){
+                    mask: none;
+                    border-radius: 12px;
+                    height: initial;
+                }
+            }
+        }
+        &.style-3{
+             &::before{
+                background-color: #E3E8FF;
+            }
+        }
+        .pricing-content{
+            position: relative;
+            z-index: 2;
+        }
+        .Popular{
+            position: absolute;
+            background-color: $theme-color-2;
+            border-radius: 16px;
+            z-index: 2;
+            padding: 5px 15px;
+            color: $white;
+            font-weight: 600;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: -15px;
+            font-size: 18px;
+        }
+    }    
+}

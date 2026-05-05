@@ -1,0 +1,261 @@
+
+.counter-section{
+    position: relative;
+    padding-bottom: 100px !important;
+
+     @include breakpoint (max-xl){
+        background-color: var(--theme-color);
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: var(--theme-color);
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 557"><path   d="M0 557V50.4519V9.38052C38.0396 29.9163 143.614 9.3805 277.289 9.38052C423 9.38054 552.217 -11.155 664 9.38069C806.815 39.6138 1257.86 9.38052 1341 9.38052C1472 9.38052 1746.15 -11.7257 1920 9.38052V551.866C1750 510.963 1254 529.787 1138 529.787C885.21 529.787 608 538.344 396 529.787C69.2597 502.406 130 551.866 0 557Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        height: 700px;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+    .snake-shape{
+        position: absolute;
+        left: 0;
+        bottom: 23%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+    .sun-shape{
+        position: absolute;
+        right: 10%;
+        top: -10%;
+        z-index: 2 !important;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+}    
+
+
+.counter-section-two {
+    position: relative;
+    &::before{
+        display: none;
+    }
+    .perashute-shape{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+
+        @include breakpoint (max-xl){
+            opacity: .2;
+        }
+    }
+}
+
+.counter-section-three{
+    position: relative;
+    margin-top: -180px;
+}
+
+
+
+.counter-items{
+    text-align: center;
+    border-right: 1px dashed $white;
+
+    @include breakpoint (max-md){
+        border-right: none;
+    }
+
+    .counter-box{
+        margin-top: 10px;
+        .count{
+            justify-content: center;
+            @include flex;
+            .odometer{
+                font-size: 50px;
+                color: $white;
+            }
+            .plus{
+                font-size: 50px;
+                color: $white; 
+                font-weight: 700;
+                font-family: "Quicksand", sans-serif;
+            }
+        }
+        
+        p{
+            color: $white;
+            margin-top: -10px;
+            font-weight: 600;
+            line-height: 1.44;
+        }
+    }
+}
+
+.counter-items-two{
+    border-right: 1px dashed #C2C2C2;
+
+    @include breakpoint (max-sm){
+        border-right: none;
+    }
+    
+    .counter-box{
+        .count{
+            .odometer{
+                color: $theme-color-2 !important;
+            }
+            .plus{
+                color: $theme-color-2;
+            }
+        }
+        p{
+            color: $text-color;
+        }
+    }
+}
+
+
+
+.counter-wrapper {
+    position: relative;
+    padding: 70px 46px;
+    margin-bottom: 15px;
+    z-index: 999;
+
+    @include breakpoint (max-xl){
+        margin-bottom: 0;
+    }
+
+    .shape{
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 1150px;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        img{
+            @include imgw;
+        }
+    }
+
+    .counter-bg-two{
+        position: absolute;
+        top: 14px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        background-color: #EEEEEE;
+        transition: all 500ms ease;
+        mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1172 336"><path   d="M64.9969 329.017C64.9969 329.017 92.8619 334.147 465.682 330.043C838.462 325.938 1163.58 367.061 1168.73 277.819C1173.88 188.578 1172.23 83.0205 1168.73 51.2514C1165.23 19.4823 1210.55 8.12048e-06 973.634 1.84763e-05C736.721 2.88321e-05 448.231 7.11007e-06 281.001 1.02608C113.771 2.05215 31.6232 -6.07843 25.6722 30.782C19.7213 67.6554 9.26687 162.976 5.76867 203.966C2.27047 244.957 -22.0963 324.912 64.9969 329.017Z" /></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        height: 329px;
+
+        @include breakpoint (max-xl){
+            height: 100%;
+        }
+    }
+    
+    .counter-items-3 {
+        border-right: 1px dashed #C2C2C2;
+        padding-right: 30px;
+        
+        
+
+        @include breakpoint (max-xl){
+            padding-right: 0;
+            border-right: none;
+        }
+       
+        h6 {
+            font-size: 18px;
+            color: $text-color;
+        }
+
+        .tops {
+            font-size: 18px;
+            color: $text-color;
+            font-weight: 600;
+            color: $heading-font;
+        }
+        .counter-box{
+            .count{
+                .odometer{
+                    color: $theme-color-2;
+                    font-size: 120px;
+                    font-weight: 400;
+                    line-height: 1;
+                    font-family: "Love Ya Like A Sister", Sans-serif;
+                    letter-spacing: 4px;
+
+                    @include breakpoint (max-sm){
+                        font-size: 90px;
+                    }
+                }
+                .plus{
+                    color: $theme-color-2;
+                    font-size: 120px;
+                    font-weight: 400;
+                    line-height: 1;
+                    font-family: "Love Ya Like A Sister", Sans-serif;
+                }
+            }
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+.counter-items-four {
+    .counter-box {
+        text-align: center;
+        p{
+            font-weight: 600;
+        }
+        .count {
+            justify-content: center;
+            @include flex;
+            .odometer {
+                font-size: 90px;
+                font-weight: 400;
+                line-height: 1;
+                color: var(--theme-color-2) !important;
+                font-family: "Love Ya Like A Sister", Sans-serif;
+            }
+            .plus {
+                font-size: 90px;
+                font-weight: 400;
+                line-height: 1;
+                color: var(--theme-color-2) !important;
+                font-family: "Love Ya Like A Sister", Sans-serif;
+            }
+        }
+    }
+}
+
