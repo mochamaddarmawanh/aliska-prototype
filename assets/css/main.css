@@ -11726,6 +11726,11 @@ p {
   left: 3%;
   z-index: 2;
 }
+@media (max-width: 991px) {
+  .contact-section .perasute-shape {
+    display: none;
+  }
+}
 .contact-section .star-shape {
   position: absolute;
   top: 35%;
